@@ -1,0 +1,68 @@
+from string import Template
+print("Sergio Sanchez")
+# for single line comments you can use hashtag
+# author: Sergio Sanchez
+"""
+for multiple line comments
+you use a 3ple single quotation
+"""
+
+print('Sergio Sanchez')
+print("Sergio Sanchez")
+# print I'm hesam and I teach "Python"
+print('I\'m hesam and I teach "Python"')
+print('''I'm hesam and I teach "Python"''')
+# one
+# two
+# three
+print("One\ntwo\n\tthree")
+print('''one
+two
+three''')
+# variables! Dynamic
+age = 27
+money = 23.46
+name = "Sergio"
+print(age, money, name)
+print('My name is ', name, 'and I am ', age, 'years old\nand I have', money, ' Dollars')
+print('My name is %s and I am %d years old \n and I have %.1f Dollars' %(name,age,money))
+print('My name is {} and I am {} years old\nand I have {} Dollars'.format(name,age,money))
+print(Template('- My name is ${name} and I am ${age} years old \n and I have ${money} Dollars').substitute(name=name, age=age, money=money))
+
+a = 7
+b = 8
+c = a+b
+d = a**b
+e = 7//2
+f = a%b
+print(c)
+print(d)
+print(e)
+print(f)
+
+# inputs in python
+name = input('What is your name')
+last_name = input('Hello {} What is your last name? '.format(name))
+print('Your full name is', name, last_name)
+num1 = int(input('give me a number and I double it for you!'))
+# int() # float() # str()
+print(num1*2)
+
+# 3 numbers:
+number1 = int(input('Please enter the first number: '))
+number2 = int(input('Please enter the second number: '))
+number3 = int(input('Please enter the third number: '))
+average = (number1 + number2 + number3)/3
+print('The average of {}, {}, {} is {:.2f}'.format(number1, number2, number3, average))
+
+'''
+########### Python 2.7 ############
+number1 = int(input('Please enter the first number: '))
+number2 = int(input('Please enter the second number: '))
+number3 = int(input('Please enter the third number: '))
+name = raw_input('What is your name')
+average = (number1 + number2 + number3)/3   # integer printed
+average = (number1 + number2 + number3)/3.0 # Float printed
+average = float(number1 + number2 + number3)/3   # Float printed
+print 'the average is ', average
+'''
