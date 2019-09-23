@@ -1,0 +1,50 @@
+'''
+Modularization a program means to break it down to smaller modules (function)
+How to create a module(function) in Python!
+
+def module_name(inputs parameters):
+    statements
+    statements
+    etc
+its customary to use 4 spaces to differentiate b/1 the header and the body of a module
+'''
+
+'''
+def message():
+    print('My name is Sergio')
+    print('I\'m learning Python!')
+
+print('I\'m here 1')
+message()
+print('I\'m here 2')
+
+value = 3
+def double_number():
+    global value
+    value = 2
+    print(value)
+    result = value*2
+    print('The result is: ', result)
+
+print(value)
+double_number()
+print(value)
+'''
+#-------------------------------------
+def show_sum(num1, num2, num3):
+    result = num1 + num2 + num3
+    return result
+
+def show_average(num1, num2, num3):
+    return show_sum(num1, num2, num3)/3
+
+def get_input():
+    num1 = int(input('Please enter the first number: '))
+    num2 = int(input('Please enter the second number: '))
+    num3 = int(input('Please enter the third number: '))
+    print('The sum of {}, {}, {} is {}'
+          .format(num1, num2, num3, show_sum(num1, num2, num3)))
+    print('The average of {}, {}, {} is {}'
+          .format(num1, num2, num3, show_average(num1, num2, num3)))
+
+get_input()
