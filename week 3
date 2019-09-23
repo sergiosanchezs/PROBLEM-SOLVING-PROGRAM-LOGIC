@@ -48,3 +48,44 @@ def get_input():
           .format(num1, num2, num3, show_average(num1, num2, num3)))
 
 get_input()
+
+#############################################################
+
+def inputData():
+    global totalSales
+    totalSales = float(input("Enter the total month sales: $"))
+
+def calcCountry(totalSales):
+    global countryTax
+    countryTax = totalSales * 0.02
+
+def calcState(totalSales):
+    global stateTax
+    stateTax = totalSales * 0.04
+
+def calcTotalTax(stateTax):
+    global totalTax
+    totalTax = stateTax + countryTax
+
+def printTaxes():
+    global countryTax, stateTax, totalTax
+    print('Country Tax: ${:.2f}'.format(countryTax))
+    print('State Tax: ${:.2f}'.format(stateTax))
+    print('Total Taxes: ${:.2f}'.format(totalTax))
+
+def main():
+    global countryTax, stateTax, totalTax, totalSales
+
+    inputData()
+    calcCountry(totalSales)
+    calcState(totalSales)
+    calcTotalTax(totalSales)
+    printTaxes()
+
+if __name__ == '__main__':
+    totalSales = 0.0
+    stateTax = 0.0
+    countryTax = 0.0
+    totalTax = 0.0
+    main()
+
