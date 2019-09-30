@@ -1,0 +1,138 @@
+'''
+3 types of decision making.
+1) single decision making (if statement).
+
+if condition:
+    statement
+    statement
+    etc
+
+2) Dual alternative decision making
+if condition:
+    statement
+    statement
+    etc
+else:
+    statement
+    statement
+    etc
+
+3) nested decision structure.
+
+if condition:
+    statement
+    etc
+else if condition:
+    statement
+    etc
+if condition:
+    statement
+    etc
+else:
+    statement
+    etc
+-------------------------- (Alternative) ------------------
+if condition:
+    statement
+    etc
+else:
+    print('anything')
+    if condition:
+        statement
+        etc
+    else:
+        if condition:
+            statement
+            etc
+        else:
+            statement
+            etc
+'''
+
+def average():
+    num1 = int(input('Enter the first number: '))
+    num2 = int(input('Enter the second number: '))
+    num3 = int(input('Enter the third number: '))
+    average = (num1 + num2 + num3)/3
+    print('the average is',format(average,'.2f'))
+    if average > 90:
+        print('This is a good score')
+    elif average > 50:
+        print('This is an average score!')
+    else:
+        print('This is a bad score!')
+
+# average()
+
+# Comparing and rational expression!
+name1 = 'MaRk'
+name2 = 'mark'
+
+if name1.lower() == name2.lower():
+    print('The names are same')
+else:
+    print('The names are NOT same')
+
+
+def sales_quota(sales):
+    if sales > 60000:
+        return True
+    else:
+        return False
+
+print(sales_quota(70000))
+
+def sales():
+    name = input('Enter your name: ')
+    sales = float(input('Enter your sales amount this year: '))
+    if sales_quota(sales):
+        # This is the case the quota met
+        print('The sales quota met')
+        if name == 'Sergio':
+            print('You met the sales quota for 2 consecutive year!')
+            print('Your bonus is a trip to Paris!')
+    else:
+        # This is the case the quota NOT met
+        print('Sales quota NOT met')
+        if name == 'Tony' or name == 'Robert':
+            print(name, 'you are FIRED!')
+            print('Pack your desk!')
+        else:
+            if name == 'Albert':
+                print('This is a warning! you did not make your quota',
+                      'for consecutive years!')
+
+# sales()
+
+# A program that take the military time and based on input make decision
+'''
+Display "Enter the military time"
+Input time
+if 4:00am < time < 12:00pm
+    Display "Good morning"
+else if 12:00pm <= time < 6:00pm:
+    Display "Good afternoon"
+else if 6:00pm <= time < 11:00pm:
+    Display "Good evening"
+else if 11:00pm <= time < 4:00pm:
+    Display "Good night"
+else:
+    Display "INVALID INPUT"
+'''
+
+time = 0
+time = int(input('Please enter the military time: '))
+while time%100 != 0 or not(time > 0000 and time < 2400):
+    print('Invalid input! ex 1200 is valid, 1260 is not!')
+    print('Its out of range')
+    time = int(input('Please enter the military time: '))
+if time > 400 and time <= 1200:
+    print('Good morning')
+elif time > 1200 and time < 1800:
+    print('Goor afternoon')
+elif time >= 1800 and time < 2300:
+    print('Good evening')
+elif (time >= 2300 and time <= 2400) or (time >= 0000 and time <= 400):
+    print('Good night')
+else:
+    print('INVALID NUMBER')
