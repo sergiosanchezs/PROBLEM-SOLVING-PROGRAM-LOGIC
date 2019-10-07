@@ -1,0 +1,65 @@
+'''
+1) count control: for
+2) condition control: while, do-while, do-until
+while condition:
+    statements
+    statements
+    etc.
+
+'''
+# libraries in python
+import random
+import math
+
+def temperature_check():
+    temp = int(input('What is the temperature: '))
+    while temp > 40:
+        print('This is two hot!')
+        print('Turn down the thermostat and'
+            'wait! ')
+        temp = int(input('What is the temperature: '))
+    else:
+        print('The temp is fine!')
+
+def num_game():
+    rand_num = random.randint(1, 100) # This function create a random number b/w 1 and 100
+    input_num = int(input('Please enter a number between 1 to 100: '))
+    # validation loop!
+    while input_num > 100 or input_num < 0:
+        print('out of range! ')
+        input_num = int(input('Please enter a number between 1 to 100: '))
+    
+    counter =  1
+    while input_num != rand_num:
+        if input_num > rand_num:
+            print('Please guess something lower!')
+        else:
+            print('Please guess something higher!')
+        input_num = int(input('Please enter a number between 1 to 100: '))
+        counter += 1
+    else:
+        print('Good job! The game is over!')
+        print('It only took you {} times to guess'.format(counter))
+
+def play_the_game():
+    confirm = 'y'
+    while confirm == 'y':
+        num_game()
+        confirm = input('type "y" if you want to play another game or type'
+                    'anything else if you want to quit!')
+
+# play_the_game()
+
+# for count in [1,2,3,4,5]: # [1,5]
+#    print(count)
+# for count in range(10):   # [0,10]
+#    print(count)
+# for count in range(1,11):   #[1,10]
+#     print(count)
+# for count in range(10,20,2):   #[10,20, step 2
+#     print(count)
+# for count in range(18,9,-2):   #[10,20, step -2]
+#     print(count)
+
+# temperature_check()
+
